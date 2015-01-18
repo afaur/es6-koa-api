@@ -1,0 +1,13 @@
+#!/bin/bash
+
+export PATH=$PATH:/usr/local/bin
+
+echo ${BASH_SOURCE[0]}
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+# Suppress KOA exception handler logging in mocha tests
+export NODE_ENV="test"
+
+"$DIR/../node_modules/mocha/bin/mocha" --harmony-generators -u bdd -R spec
+

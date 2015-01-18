@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export PATH=$PATH:/usr/local/bin
+
+echo ${BASH_SOURCE[0]}
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+nodemon --exec 6to5-node --experimental "$DIR/../src/app.js"
+
