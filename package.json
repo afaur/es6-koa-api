@@ -1,7 +1,7 @@
 {
   "name": "ES6-KOA-API",
   "version": "1.0.0",
-  "description": "Use ES6 Features (Supported in 6To5) with Koa and Mocha to produce an API.",
+  "description": "Use ES6 Features (Supported in 6To5) using Koa (and Mocha tests) to produce an API in node.",
   "main": "./src/app.js",
   "scripts": {
     "start": "./bin/deploy",
