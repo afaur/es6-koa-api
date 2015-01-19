@@ -33,7 +33,7 @@ module.exports.addUser = function *addUser() {
 
 module.exports.getUser = function *getUser(id) {
 
-  // Yield to the process to retrieve the user object from post params
+  // Yield to the process to retrieve the user object from mongo
   var user = yield users.findById(id);
 
   // Set body to the user object
