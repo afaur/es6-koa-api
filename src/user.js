@@ -16,6 +16,7 @@ module.exports.addUser = function *addUser() {
   // Yield to the process to retrieve the user object from post params
   var userFromRequest = yield parse(this);
 
+  // Throw exception if name property not provided
   if (!userFromRequest.name) {
     this.throw(400, "name required");
   }
