@@ -1,5 +1,8 @@
 ## Requirements:
 
+### Node
+  - Updated to version 0.12.4
+
 ### Babel
   - [Github-Babel](https://github.com/babel/babel)
   `npm install babel -g`
