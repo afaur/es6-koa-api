@@ -5,7 +5,7 @@ var request = require("supertest")
 var co = require("co");
 
 // Convert required files from ES6 to ES5
-require("6to5/register");
+require("babel/register");
 
 // Require our application (ES6)
 var app = require("../src/app.js");

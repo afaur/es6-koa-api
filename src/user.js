@@ -35,7 +35,7 @@ module.exports.addUser = function *addUser() {
 module.exports.getUser = function *getUser(id) {
 
   // Yield to the process to retrieve the user object from mongo
-  var user = yield users.findById(id);
+  var user = yield users.findById(id.toString);
 
   // Set body to the user object
   this.body = user;
@@ -51,7 +51,7 @@ module.exports.updateUser = function *updateUser(id) {
   var userFromRequest = yield parse(this);
 
   // Update user with new user object
-  yield users.updateById(id, userFromRequest);
+  yield users.updateById(id.toString(), userFromRequest);
 
   // Set location to this users rest resource
   this.set("location", "/user/" + id);
@@ -64,7 +64,7 @@ module.exports.updateUser = function *updateUser(id) {
 module.exports.deleteUser = function *deleteUser(id) {
 
   // Yield to the process to delete the user
-  yield users.remove({_id : id});
+  yield users.remove({_id : id.toString()});
 
   // Set response code to OK/Success
   this.status = 200;
